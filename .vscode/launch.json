@@ -1,0 +1,92 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+          "type": "node",
+          "request": "launch",
+          "name": "Client_SDK_PDF",
+          "program": "${workspaceFolder}/lib/cli.js",
+          "args": [
+            "docs-to-pdf", "docusaurus",
+            // set urls to start generating PDF from
+            "--initialDocURLs", "https://growingio.github.io/growingio-sdk-docs/docs",
+            // used to find the part of main content
+            "--contentSelector", "article",
+            // used to find next url
+            "--paginationSelector", "a.pagination-nav__link.pagination-nav__link--next",
+            // exclude selector, ex: 分页控件
+            "--excludeSelectors", "a.card.padding--lg.cardContainer_fWXF",
+            "--excludePaths", "/ios/modules/ABTesting%20Module",
+            // css style to adjust PDF output ex: 中文字体
+            "--cssStyle", "*{font-family: Arial, Helvetica, sans-serif !important;}",
+            // name of output PDF file
+            "--outputPDFFilename", "GrowingIO SDK 集成文档.pdf",
+            // pdf format ex: A3, A4...
+            "--paperFormat", "A4",
+          ],
+          "sourceMaps": true,
+          "outFiles": ["${workspaceFolder}/lib/**/*.js"],
+          "preLaunchTask": "npm: build",
+          "console": "integratedTerminal"
+        },
+        {
+          "type": "node",
+          "request": "launch",
+          "name": "Server_SDK_PDF",
+          "program": "${workspaceFolder}/lib/cli.js",
+          "args": [
+            "docs-to-pdf", "docusaurus",
+            // set urls to start generating PDF from
+            "--initialDocURLs", "https://growingio.github.io/growingio-sdk-docs/docs/server",
+            // used to find the part of main content
+            "--contentSelector", "article",
+            // used to find next url
+            "--paginationSelector", "a.pagination-nav__link.pagination-nav__link--next",
+            // exclude selector, ex: 分页控件
+            "--excludeSelectors", "a.card.padding--lg.cardContainer_fWXF",
+            // css style to adjust PDF output ex: 中文字体
+            "--cssStyle", "*{font-family: Arial, Helvetica, sans-serif !important;}",
+            // name of output PDF file
+            "--outputPDFFilename", "GrowingIO 服务端 SDK 集成文档.pdf",
+            // pdf format ex: A3, A4...
+            "--paperFormat", "A4",
+          ],
+          "sourceMaps": true,
+          "outFiles": ["${workspaceFolder}/lib/**/*.js"],
+          "preLaunchTask": "npm: build",
+          "console": "integratedTerminal"
+        },
+        {
+          "type": "node",
+          "request": "launch",
+          "name": "Compliance_PDF",
+          "program": "${workspaceFolder}/lib/cli.js",
+          "args": [
+            "docs-to-pdf", "docusaurus",
+            // set urls to start generating PDF from
+            "--initialDocURLs", "https://growingio.github.io/growingio-sdk-docs/knowledge/compliance",
+            // used to find the part of main content
+            "--contentSelector", "article",
+            // used to find next url
+            "--paginationSelector", "a.pagination-nav__link.pagination-nav__link--next",
+            // exclude selector, ex: 分页控件
+            "--excludeSelectors", "a.card.padding--lg.cardContainer_fWXF",
+            // css style to adjust PDF output ex: 中文字体
+            "--cssStyle", "*{font-family: Arial, Helvetica, sans-serif !important;}",
+            // name of output PDF file
+            "--outputPDFFilename", "GrowingIO SDK 合规指南.pdf",
+            // pdf format ex: A3, A4...
+            "--paperFormat", "A4",
+            // only the paths in the --initialDocURLs will be included in the PDF
+            "--restrictPaths",
+          ],
+          "sourceMaps": true,
+          "outFiles": ["${workspaceFolder}/lib/**/*.js"],
+          "preLaunchTask": "npm: build",
+          "console": "integratedTerminal"
+        },
+      ]
+}
