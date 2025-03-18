@@ -19,11 +19,10 @@
             "--paginationSelector", "a.pagination-nav__link.pagination-nav__link--next",
             // exclude selector, ex: 分页控件
             "--excludeSelectors", "a.card.padding--lg.cardContainer_fWXF",
-            "--excludePaths", "/ios/modules/ABTesting%20Module",
             // css style to adjust PDF output ex: 中文字体
             "--cssStyle", "*{font-family: Arial, Helvetica, sans-serif !important;}",
             // name of output PDF file
-            "--outputPDFFilename", "GrowingIO SDK 集成文档.pdf",
+            "--outputPDFFilename", "GrowingIO SDK.pdf",
             // pdf format ex: A3, A4...
             "--paperFormat", "A4",
           ],
@@ -50,7 +49,7 @@
             // css style to adjust PDF output ex: 中文字体
             "--cssStyle", "*{font-family: Arial, Helvetica, sans-serif !important;}",
             // name of output PDF file
-            "--outputPDFFilename", "GrowingIO 服务端 SDK 集成文档.pdf",
+            "--outputPDFFilename", "GrowingIO Server SDK.pdf",
             // pdf format ex: A3, A4...
             "--paperFormat", "A4",
           ],
@@ -77,7 +76,7 @@
             // css style to adjust PDF output ex: 中文字体
             "--cssStyle", "*{font-family: Arial, Helvetica, sans-serif !important;}",
             // name of output PDF file
-            "--outputPDFFilename", "GrowingIO SDK 合规指南.pdf",
+            "--outputPDFFilename", "GrowingIO SDK Compliance.pdf",
             // pdf format ex: A3, A4...
             "--paperFormat", "A4",
             // only the paths in the --initialDocURLs will be included in the PDF
